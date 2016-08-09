@@ -1,0 +1,131 @@
+{
+    "products": 
+    [
+        {
+        "fairy_sparklers": {
+            "id": 0,
+            "type": 0,
+            "name": "Fairy Sparklers",
+            "description": "Multi-colored sparklers that are safe for any age."
+        },
+        {
+        "smoke_ball": {
+            "id": 1,
+            "type": 0,
+            "name": "Smoke Ball",
+            "description": "Fun for any age as they release a color cloud into the air."
+        },
+        {
+        "firecracker": {
+            "id": 2,
+            "type": 0,
+            "name": "Firecracker",
+            "description": "Small explosive device primarily designed to produce a large amount of noise, especially in the form of a loud bang."
+        },
+        {
+        "roman_candle": {
+            "id": 3,
+            "type": 1,
+            "name": "Roman Candle",
+            "description": "Traditional type of firework that ejects one or more stars or exploding shells. "
+        },
+        {
+        "multiple_rocket_launcher": {
+            "id": 4,
+            "type": 1,
+            "name": "Multiple Rocket Launcher",
+            "description": "A box that launches many rockets in the air."
+        },
+        {
+        "fountain": {
+            "id": 5,
+            "type": 1,
+            "name": "Fountain",
+            "description": "Emits showers of red, green, yellow and blue star with silvery and golden chrysanthemum, crackles and silvery glitter"
+        },
+        {
+        "spider": {
+            "id": 6,
+            "type": 2,
+            "name": "Spider",
+            "description": "This appears in the sky as a series of radial lines much like the legs of a spider."
+        },
+        {
+        "kamuro": {
+            "id": 7,
+            "type": 2,
+            "name": "Kamuro",
+            "description": "A dense burst of glittering silver or gold stars which leave a heavy glitter trail and are very shiny in the night's sky."
+        },
+        {
+        "palmshell": {
+            "id": 8,
+            "type": 2,
+            "name": "Palmshell",
+            "description": "A shell containing a relatively few large comet stars arranged in such a way as to burst with large arms or tendrils, producing a palm tree-like effect."
+        },
+        {
+        "lead_azide": {
+            "id": 9,
+            "type": 3,
+            "name": "Lead Azide",
+            "description": "Lead azide is highly sensitive and usually handled and stored under water in insulated rubber containers. It will explode after a fall of around 150 mm (6 in) or in the presence of a static discharge of 7 millijoules"
+        },
+        {
+        "mercury_fulminate": {
+            "id": 10,
+            "type": 3,
+            "name": "Mercury Fulminate",
+            "description": "It is highly sensitive to friction and shock and is mainly used as a trigger for other explosives in percussion caps and blasting caps.."
+        },
+        {
+        "ddnp": {
+            "id": 11,
+            "type": 3,
+            "name": "DDNP",
+            "description": "Although Griess had mentioned in 1859 that diazodinitrophenol exploded upon heating,"
+        },
+        {
+        "black_powder": {
+            "id": 12,
+            "type": 4,
+            "name": "Black Powder",
+            "description": "Gunpowder is classified as a low explosive because of its relatively slow decomposition rate and consequently low brisance."
+        },
+        {
+        "smokeless_powder": {
+            "id": 13,
+            "type": 4,
+            "name": "Smokeless Powder",
+            "description": "The basis of the term smokeless is that the combustion products are mainly gaseous, compared to around 55% solid products (mostly potassium carbonate, potassium sulfate, and potassium sulfide) for black powder.."
+        },
+        {
+        "flash_powder": {
+            "id": 14,
+            "type": 4,
+            "name": "Flash Powder",
+            "description": "Flash powder is a pyrotechnic composition, a mixture of oxidizer and metallic fuel, which burns quickly and if confined produces a loud report."
+        },
+        {
+        "petn": {
+            "id": 15,
+            "type": 5,
+            "name": "PETN",
+            "description": "1 kg of PETN has the energy of 1.24 kg TNT."
+        },
+        {
+        "rdx": {
+            "id": 16,
+            "type": 5,
+            "name": "RDX",
+            "description": "RDX, an initialism for Research Department explosive, is an explosive nitroamine widely used in military and industrial applications."
+        },
+        {
+        "water_gel": {
+            "id": 17,
+            "type": 5,
+            "name": "Water Gel",
+            "description": "A water-gel explosive is a fuel sensitized explosive mixture consisting of an aqueous ammonium nitrate solution that acts as the oxidizer."
+        }
+    ]
+}
