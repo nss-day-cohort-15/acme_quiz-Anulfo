@@ -1,7 +1,7 @@
 $(document).ready(function(){
-var categories = [];
-var types = [];
-var products = [];
+var categories;
+var types;
+var products;
     var catData = function() {
         return new Promise((resolve, reject) => {
             $.ajax({
@@ -37,17 +37,29 @@ var products = [];
             })
         })
     }
- catData()
-  .then(function(cat) {
-    categories = cat;
-    return typData();
-  })
-  .then(function(typ) {
-    types = typ;
-    return prodData(typ);
-  })
-  .then(function (prod) {
-    products = prod.products;
-    console.log(categories, types, products);
-  });
+
+    catData()
+        .then(function(cat) {
+        categories = cat;
+        return typData();
+        })
+        .then(function(typ) {
+        objecTyp = typ;
+        return prodData();
+        })
+        .then(function (prod) {
+        products = prod;
+        console.log(categories, objecTyp, products);
+        $("#fire").click(function(event){
+            clickFireTypes(categories, objecTyp,products)
+        }); 
+        $("#demo").click(function(event){
+            clickDemoTypes(categories, objecTyp,products)
+        });        
+    })
 })
+                // typArray += $("#showGrid").html += `<div class="card">
+                // $("div.card").append<div class="header">
+                // $("div.header").append<h1>${types[i].name}</h1>`
+                // console.log(typArray);
+

@@ -1,0 +1,8 @@
+.types {
+    border: 1px solid black;
+    height: 200px;
+    width: 30%;
+    background-color: blue;
+    color: white;
+    float: left;
+}
