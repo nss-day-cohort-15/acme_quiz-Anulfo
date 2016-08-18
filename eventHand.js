@@ -28,38 +28,21 @@ var clickFireTypes = function (categories, objecTyp, products) {
             $(".types").click(function(evt){
             clickFireProd(evt, products);
         });
-        }
-
-var clickFireProd = function (evt, products) {
-    // Array to push the products.products[i]. FIREWORKS PRODUCTS PERSONAL
-    var fireProdPer = [];
-    console.log(evt.currentTarget.id);
-    console.log(products.products[0]);
-    //Fill the array with the personal fireworks
-    if (evt.currentTarget.id === "card0") {
-        for (var i = 0; i < products.products.length; i++){
-            if (products.products[i].category === 0) {
-                fireProdPer.push(products.products[i])
-            };
-        };
-    for (var i = 0; i < fireProdPer.length; i++){
-            var personCards = [];
-            typCards += `<div id="card${i}"  class="types">
-            <div class="header">
-            <h1>${typFireworks[i].name}</h1>
-            </div>
-            <div class="content">
-            <p>${typFireworks[i].description}</p>
-            </div>`
-            // console.log(typCards);
-            $("#showGrid").append(typCards);
-            }
-            $(".types").click(function(evt){
-            clickFireProd(evt, products);
-        });
-    };
 }
 
+var clickFireProd = function (evt, products) {
+    var currentCard = evt.currentTarget;
+    var pers = []; 
+    var ceremonial = []; 
+    var party = [];
+    console.log(products.products.length);
+    for (var i = 0; i < products.products.length; i++){
+        if (products.products[i].type === 0) {
+            pers.push(products.products[i]);
+        }
+    }  
+    console.log(pers);  
+}
 var clickDemoTypes = function (categories,objecTyp, products) {
         console.log(objecTyp.types);
  }
