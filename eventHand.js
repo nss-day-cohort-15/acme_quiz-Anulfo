@@ -26,12 +26,13 @@ var clickFireTypes = function (categories, objecTyp, products) {
         $("#showGrid").append(typCards);
     }
         $(".types").click(function(evt){
-        clickFireProd(evt, products, typFireworks);
+        var currentCard = evt.currentTarget;
+        clickFireProd(products, typFireworks);
+        clickSelector(currentCard, typFireworks);
     });
 }
 // this function distributes the products among the types, based on type
-var clickFireProd = function (evt, products, typFireworks) {
-    var currentCard = evt.currentTarget;
+var clickFireProd = function (products, typFireworks) {
 // this variables represent the types for each product
     var pers = []; 
     var party = [];
@@ -51,21 +52,20 @@ var clickFireProd = function (evt, products, typFireworks) {
     console.log(pers);
     console.log(party);
     console.log(ceremonial);
-    clickSelector(currentCard, typFireworks);
 }
 
 var clickSelector = function (currentCard, typFireworks) {
-    var currentCard = currentCard;
     console.log(currentCard);
     $(currentCard).removeClass("types");
     $(currentCard).addClass("selected");
-    for (var i = 0; i < typFireworks.length; i++) {
-        console.log(typFireworks[i]);
+    console.log($(typFireworks)[0].className);
+    // for (var i = 0; i < typFireworks.length; i++) {
+    //     console.log(typFireworks[i]);
         // if (typFireworks[i].classList === "types"){
         //     typFireworks[i].removeClass("types");
         //     typFireworks[i].addClass("hide");
         // }
-    }
+    // }
     // console.log(typFireworks[0]);
 }
 // var clickDemoTypes = function (categories,objecTyp, products) {
