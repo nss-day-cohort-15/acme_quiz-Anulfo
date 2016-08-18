@@ -15,3 +15,16 @@
     color: white;
     float: left;
 }
+
+.hide {
+    display: none;
+}
+
+.selected {
+    width:30%;
+    height: 200px;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+    float: left;
+}
