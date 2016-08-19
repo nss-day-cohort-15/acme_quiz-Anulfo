@@ -51,6 +51,7 @@ var products;
         products = prod;
         console.log(categories, objecTyp, products);
         $("#fire").click(function(event){
+            $("#showGrid").empty();
             clickFireTypes(categories, objecTyp,products)
         }); 
         $("#demo").click(function(event){

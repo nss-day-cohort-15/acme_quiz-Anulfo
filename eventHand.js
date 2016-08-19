@@ -5,8 +5,6 @@ var clickFireTypes = function (categories, objecTyp, products) {
         var typFireworks = []; 
 // console.log(objecTyp.types);
 // this for loop over here select just the types with category 0 and pushed them into the typFireworks array.
-
-    console.log(typFireworks);
         for (var i = 0; i < objecTyp.types.length; i++) {
             if (objecTyp.types[i].category === 0) {
                 typFireworks.push(objecTyp.types[i]);
@@ -15,7 +13,7 @@ var clickFireTypes = function (categories, objecTyp, products) {
             // console.log(typFireworks);
     for (var i = 0; i < typFireworks.length; i++){
         var typCards = "";
-        typCards += `<div id="card${i}"  class="types">
+        typCards += `<div id="${i}"  class="types">
         <div class="header">
         <h1>${typFireworks[i].name}</h1>
         </div>
@@ -28,7 +26,7 @@ var clickFireTypes = function (categories, objecTyp, products) {
         $(".types").click(function(evt){
         var currentCard = evt.currentTarget;
         clickFireProd(products, typFireworks);
-        clickSelector(currentCard, typFireworks);
+        clickSelector(currentCard, products);
     });
 }
 // this function distributes the products among the types, based on type
@@ -54,20 +52,38 @@ var clickFireProd = function (products, typFireworks) {
     console.log(ceremonial);
 }
 
-var clickSelector = function (currentCard, typFireworks) {
+var clickSelector = function (currentCard, products) {
     console.log(currentCard);
-    $(currentCard).removeClass("types");
+    console.log($(".types"));
+    $(".types").addClass("hide");
+    $(currentCard).removeClass("hide");
     $(currentCard).addClass("selected");
-    console.log($(typFireworks)[0].className);
-    // for (var i = 0; i < typFireworks.length; i++) {
-    //     console.log(typFireworks[i]);
-        // if (typFireworks[i].classList === "types"){
-        //     typFireworks[i].removeClass("types");
-        //     typFireworks[i].addClass("hide");
-        // }
-    // }
-    // console.log(typFireworks[0]);
+    // populateTypes()
+    var perProdCards = "";
+    productType = currentCard.id;
+    $.each(products.products, function(){
+        if(products.products.type === productType){
+        perProdCards += `<div class="products">
+        <div class="header">
+        <h1>${products.products.name}</h1>
+        </div>
+        <div class="content">
+        <p>${products.products.description}</p>
+        </div>`
+        }
+        console.log(perProdCards);
+    }) 
+    console.log(productType);
+    $("#showGrid").append(perProdCards);
 }
-// var clickDemoTypes = function (categories,objecTyp, products) {
-//         console.log(objecTyp.types);
-//  }
+
+var clickDemoTypes = function (categories,objecTyp, products) {
+    console.log(objecTyp.types);
+
+ }
+    // for (var i = 0; i < typFireworks.length; i++) {
+    //     $("#card" + i).removeClass("selected");
+    //     $("#card" + i).addClass("hide");
+    //     }
+    // $(currentCard).removeClass("hide");
+    // $(currentCard).addClass("selected");
