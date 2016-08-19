@@ -25,31 +25,9 @@ var clickFireTypes = function (categories, objecTyp, products) {
     }
         $(".types").click(function(evt){
         var currentCard = evt.currentTarget;
-        clickFireProd(products, typFireworks);
+        // clickFireProd(products, typFireworks);
         clickSelector(currentCard, products);
     });
-}
-// this function distributes the products among the types, based on type
-var clickFireProd = function (products, typFireworks) {
-// this variables represent the types for each product
-    var pers = []; 
-    var party = [];
-    var ceremonial = []; 
-    console.log(products.products.length);
-    for (var i = 0; i < products.products.length; i++){
-        if (products.products[i].type === 0) {
-            pers.push(products.products[i]);
-        }
-        else if (products.products[i].type === 1) {
-            party.push(products.products[i]);
-        }
-        else if (products.products[i].type === 2) {
-            ceremonial.push(products.products[i]);
-        }
-    }  
-    console.log(pers);
-    console.log(party);
-    console.log(ceremonial);
 }
 
 var clickSelector = function (currentCard, products) {
@@ -59,20 +37,19 @@ var clickSelector = function (currentCard, products) {
     $(currentCard).removeClass("hide");
     $(currentCard).addClass("selected");
     // populateTypes()
-    var perProdCards = "";
     productType = currentCard.id;
-    $.each(products.products, function(){
-        if(products.products.type === productType){
+    var perProdCards = "";
+    products.products.forEach(function(thing, index){
+        if(thing.type === parseInt(productType)){
         perProdCards += `<div class="products">
         <div class="header">
-        <h1>${products.products.name}</h1>
+        <h1>${thing.name}</h1>
         </div>
         <div class="content">
-        <p>${products.products.description}</p>
+        <p>${thing.description}</p>
         </div>`
         }
-        console.log(perProdCards);
-    }) 
+    })
     console.log(productType);
     $("#showGrid").append(perProdCards);
 }
