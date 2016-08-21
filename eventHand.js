@@ -14,7 +14,7 @@ var clickFireTypes = function (categories, objecTyp, products) {
     for (var i = 0; i < typFireworks.length; i++){
         var typCards = "";
         typCards += `
-        <div id="${i}"  class="type col-md-4 col-">
+        <div id="${i}"  class="type col-md-4 ">
             <div class="header">
                 <h1>${typFireworks[i].name}</h1>
             </div>
@@ -22,7 +22,7 @@ var clickFireTypes = function (categories, objecTyp, products) {
             <div class="content">
             <p>${typFireworks[i].description}</p>
             </div>
-        </div`
+        </div>`
         // console.log(typCards);
         $("#typeGrid").append(typCards);
         }
@@ -38,9 +38,10 @@ var clickSelector = function (currentCard, products) {
     $(".type").addClass("hide");
     $(currentCard).removeClass("hide");
     $(currentCard).addClass("selected col-lg-6");
-    productType = currentCard.id;
+    var productType = currentCard.id;
     var perProdCards = "";
     products.products.forEach(function(thing, index){
+        // console.log(thing.type);
         if(thing.type === parseInt(productType)){
         perProdCards += `
         <div class="product col-md-4">
@@ -57,7 +58,23 @@ var clickSelector = function (currentCard, products) {
 }
 
 var clickDemoTypes = function (categories,objecTyp, products) {
-    console.log(objecTyp.types);
-    var typDemolition = []
-    
- }
+    $.each(objecTyp.types, function() {
+        var typDemoCards = ""
+        if (this.category === 1) {
+            typDemoCards += 
+            `<div id="${this.id}" class="type col-md-4">
+                <div class="header">
+                    <h1>${this.name}</h1>
+                </div>
+                <div class="content">
+                    <p>${this.description}</p>
+                </div>
+            </div>`
+        $("#typeGrid").append(typDemoCards);
+        }
+        });
+        $(".type").click(function(evt){
+        var currentCard = evt.currentTarget;
+        clickSelector(currentCard, products);    
+    });
+}
