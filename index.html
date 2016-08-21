@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACME QUIZ</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navBar">
+            <!-- The dropdown list button -->
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Categories <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li id="fire"><a href=#>Fireworks</a></li>
+                    <li id="demo"><a href=#>Demolition</a></li>
+                </ul>
+            </div>
+        </div>
+    <div class="container">
+        <div id="typeGrid" class="row">
+        </div>
+        <div id="prodGrid" class="row">
+        </div>
+    </div>
+<!-- Bootstrap and Jquery dependencies -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="scripter.js"></script>
+<script type="text/javascript" src="eventHand.js"></script>
+<script src="populators.js"></script>
+</body>
+</html>

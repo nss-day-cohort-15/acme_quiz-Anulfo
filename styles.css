@@ -1,0 +1,40 @@
+.type {
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 200px;
+    /*width: 30%;*/
+    background-color: grey;
+    color: white;
+    /*float: left;*/
+}
+
+.product {
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    height: 200px;
+    /*width: 30%;*/
+    /*background-color: red;*/
+    color: black;
+    float: left;
+}
+
+.hide {
+    display: none;
+}
+
+.selected {
+    /*width:30%;*/
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.navBar {
+     margin: 1em;
+}
+
+.row {
+    margin: 1em;
+}

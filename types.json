@@ -1,0 +1,40 @@
+{
+    "types": [
+        {
+            "id": 0,
+            "category": 0,
+            "name": "personal",
+            "description": "Fireworks intended for personal use"
+        },        
+        {
+            "id": 1,
+            "category": 0,
+            "name": "party",
+            "description": "Fireworks intended for recreational use during holiday celebrations"
+        },        
+        {
+            "id": 2,
+            "category": 0,
+            "name": "ceremonial",
+            "description": "Fireworks intended for great festivities"
+        },        
+        {
+            "id": 3,
+            "category": 1,
+            "name": "high explosives",
+            "description": "The disruptive effect of the reaction makes these explosives valuable as a bursting charge but precludes their use as a low-explosive propellant"
+        },        
+        {
+            "id": 4,
+            "category": 1,
+            "name": "low explosives",
+            "description": "Low explosives are mostly solid combustible materials that decompose rapidly but do not normally detonate"
+        },        
+        {
+            "id": 5,
+            "category": 1,
+            "name": "boosters",
+            "description": "An explosive booster is a sensitive explosive charge that acts as a bridge between a (relatively weak) conventional detonator and a low-sensitivity (but typically high-energy)"
+        }
+    ]
+}
