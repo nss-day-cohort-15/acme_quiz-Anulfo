@@ -49,12 +49,15 @@ var products;
         })
         .then(function (prod) {
         products = prod;
-        console.log(categories, objecTyp, products);
+        // console.log(categories, objecTyp, products);
         $("#fire").click(function(event){
-            $("#showGrid").empty();
+            $("#typeGrid").empty();
+            $("#prodGrid").empty();
             clickFireTypes(categories, objecTyp,products)
         }); 
         $("#demo").click(function(event){
+            $("#typeGrid").empty();
+            $("#prodGrid").empty();
             clickDemoTypes(categories, objecTyp,products)
         });        
     })
